@@ -4,9 +4,11 @@ public class GeneaologyRequestApproval {
         private int requestId;
         // private Citizen requester; 
         private List<Form> requestedForms;
-        private String status;
+        private String status = "Pending";
         private int immigrantId;
         
+        public GeneaologyRequestApproval() {
+        }
         public GeneaologyRequestApproval(int requestId, List<Form> requestedForms, String status, int immigrantId) {
             this.requestId = requestId;
             this.requestedForms = requestedForms;
@@ -36,6 +38,25 @@ public class GeneaologyRequestApproval {
         }
         public void setImmigrantId(int immigrantId) {
             this.immigrantId = immigrantId;
+        }
+
+        public void submitRequest() {
+            // this.status = "Submitted";
+        }
+
+        public void cancelRequest() {
+            // this.status = "Canceled";
+            // send back to reviewer
+        }
+
+        // Used to access database to retrieve forms with matching ids.
+        public List<Form> findFormsByIds(List<Integer> listOfFormIds) {
+            return List.of(new Form(1, "test", "test"));
+        }
+
+        // Used to access database to retrieve immigrant with matching id.
+        public Immigrant findImmigrantById(int immigrantId) {
+            return new Immigrant(123, "Test", null);
         }
 
 }

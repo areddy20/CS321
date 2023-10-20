@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 public class EmailServiceTest {
 
     @Test
-    public void Should_ReturnTrue_When_EmailIsValidAndEmailIsSent() {
+    public void SendEmailShould_ReturnTrue_When_EmailContentIsValidAndEmailIsSent() {
         String testSubject = "Hello User";
         String testBody = "Here are your forms";
         String emailAddress = "123@gmail.com";
