@@ -56,7 +56,7 @@ public class GeneaologyRequestApproval {
 
         // Used to access database to retrieve immigrant with matching id.
         public Immigrant findImmigrantById(int immigrantId) {
-            return new Immigrant(123, "Test", null);
+            return new Immigrant(123, "Test", 0);
         }
 
 }
